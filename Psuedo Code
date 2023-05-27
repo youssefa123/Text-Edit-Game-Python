@@ -1,0 +1,55 @@
+#This program will run a text-based Survival Game to Survive the Apocalypse
+
+#Define the Intro function
+def intro():
+    print("As you may know, the world is at its very last knees. Your blood type is immune to the radiation.")
+    print("There is a remote underground civilization left with all the remaining survivors.")
+    print("Getting there won't be easy. The world is filled with radiation.")
+    print("One of the remaining survivors on the ground that was exposed to the radiation formed a gang as a desperate attempt to rule the remaining world.")
+    print("The Gang leader, Micheal, holds the key to the underground, though he doesn't know what it's for. He still holds it because he knows it's important.")
+    print("Your objective is to defeat the gang leader, grab the key, and make it to the underground, aka UTOPIA.")
+    decision = input("The choice is yours! Will you come to Utopia or stay on the ground, where there's constant terror and crime? (yes/no): ")
+    return decision
+
+#Define the start_user_function_pt1 function
+def start_user_function_pt1():
+    print("As expected, you made the right choice, a survivor's choice. The key is held within Micheal's headquarters.")
+    print("You have two approaches to getting the key:")
+    print("1. Stealth")
+    print("2. Loud and Proud")
+    approach = input("Which approach would you like to choose? (1/2): ")
+    return approach
+
+#Define the Stealth function
+def stealth():
+    print("Micheal isn't in the gang base. The base is guarded by 5 thugs at all times.")
+    print("The thugs are hanging outside the door. You have to distract them to make them separate.")
+    print("1. Throw an object at the opposite end of the room.")
+    print("2. Whistle and run silently behind a box.")
+    print("3. Notice a printer, turn it on, and run silently behind a box.")
+    choice = input("Enter your choice (1/2/3): ")
+    
+    if choice == "1":
+        print("You throw an object, distracting the thugs. They scatter and split up to investigate.")
+        print("Their scattering leaves the door unguarded. You sneak into the room.")
+        print("While in the room, you find the key. You jump out the window, escaping.")
+        return True
+    elif choice == "2":
+        print("You successfully whistle, but as you silently run behind the box, you get CAUGHT.")
+        return False
+    elif choice == "3":
+        print("You turn on the printer and successfully run silently behind a box.")
+        print("There's still one gang member guarding the door. You throw an object, distracting him, and leaving the door unguarded.")
+        return True
+
+#Define the Loud and Proud function
+def loud_and_proud():
+    print("Micheal isn't in the gang base. The base is guarded by 5 thugs at all times.")
+    print("The thugs are hanging outside the door. You have to get the key by any means necessary.")
+    print("1. Throw a grenade near the door and make a run for it.")
+    print("2. Make your presence known and start fighting the thugs.")
+    choice = input("Enter your choice (1/2): ")
+
+    if choice == "1":
+        print("You throw a grenade near the door. It blasts 3 thugs unconscious, leaving 2 stunned.")
+        print("You begin to fight them, and they put up a good fight, but they are no match for you
